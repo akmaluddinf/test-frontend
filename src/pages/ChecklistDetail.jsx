@@ -1,6 +1,5 @@
 import React from 'react'
 import { checklist } from '../services/api'
-import { Link } from 'react-router-dom'
 
 function checkListDetail({ data, onDeleted }) {
 

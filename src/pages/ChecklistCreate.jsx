@@ -8,9 +8,7 @@ function ChecklistCreate() {
 
   const handleSave = async () => {
     const response = await checklist.post({ name })
-    console.log(response)
     if (response.status === 201) {
-      console.log('success')
       history.push(`/checklist/${response.data.id}`)
     }
   }

@@ -7,13 +7,8 @@ function ChecklistItemCreate() {
   const [itemName, setItemName] = useState('')
   const [checklistId, setChecklistId] = useState(0)
 
-  const handleSave = async () => {
-    const response = await item.post({ itemName, checklistId })
-    console.log(response)
-    if (response.status === 201) {
-      console.log('success')
-
-    }
+  const handleSave = () => {
+    item.post({ itemName, checklistId })
   }
 
   const handleChecklistIdChange = (event) => {

@@ -8,18 +8,8 @@ function Checklist() {
   const [list, setList] = useState([])
 
   const populateList = async () => {
-    console.log('populateList')
-    try {
-      const response = await checklist.getAll()
-      console.log(response.data.data)
-      if (response.status === 200) setList(response.data.data)
-    } catch (e) {
-      if (e && e.response && e.response.data) {
-        console.log(e.response.data)
-      } else {
-        console.log(e)
-      }
-    }
+    const response = await checklist.getAll()
+    setList(response.data.data)
   }
 
   useEffect(() => {
